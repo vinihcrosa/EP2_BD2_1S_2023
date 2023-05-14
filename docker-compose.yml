@@ -19,3 +19,4 @@ services:
       - ./sql/populate_pais.sql:/docker-entrypoint-initdb.d/01_pais.sql
       - ./sql/populate_participante.sql:/docker-entrypoint-initdb.d/02_participante.sql
       - ./sql/populate_hotel.sql:/docker-entrypoint-initdb.d/03_hotel.sql
+      - ./sql/populate_ParticipacaoCampeonatos.sql:/docker-entrypoint-initdb.d/04_ParticipacaoCampeonatos.sql
