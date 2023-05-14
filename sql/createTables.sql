@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS hotel (
   PRIMARY KEY (idHotel)
 );
 
-CREATE TABLE IF NOT EXISTS acomodacoesPareticipanteHotel (
+CREATE TABLE IF NOT EXISTS acomodacoesParticipanteHotel (
   idParticipante INTEGER NOT NULL,
   idHotel INTEGER NOT NULL,
   dataEntrada DATE,
