@@ -8,5 +8,7 @@
     <file url="file://$PROJECT_DIR$/sql/populate_ParticipacaoCampeonatos.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/sql/populate_jogo.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/sql/populate_movimento.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/populate_acomodacoesParticipanteHotel.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/populate_salao.sql" dialect="GenericSQL" />
   </component>
 </project>

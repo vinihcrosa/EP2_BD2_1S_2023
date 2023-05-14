@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS movimento (
     nroJogo INTEGER NOT NULL,
     jogada VARCHAR(20),
     comentario TEXT,
-    PRIMARY KEY (nroConsecutivo),
+    PRIMARY KEY (nroConsecutivo, nroJogo),
     FOREIGN KEY (nroJogo) REFERENCES jogo(idJogo)
 );
 
