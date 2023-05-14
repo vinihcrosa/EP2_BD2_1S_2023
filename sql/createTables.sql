@@ -117,7 +117,8 @@ RETURNS TRIGGER AS $$
     BEGIN
         IF NEW.jogadorBrancas = NEW.jogadorPretas THEN
             RAISE EXCEPTION 'Os Jogadores devem ser diferentes';
-        end if;
+        END IF;
+        RETURN NEW;
     END;
 $$ LANGUAGE plpgsql;
 
@@ -131,10 +132,10 @@ RETURNS TRIGGER AS $$
 DECLARE
   juiz_tipo text;
 BEGIN
-  SELECT participandoComo INTO juiz_tipo FROM participantes WHERE idAssociado = NEW.juiz;
+  SELECT participandoComo INTO juiz_tipo FROM participantes WHERE idAssociado = NEW.idArbitro;
   IF juiz_tipo IS NULL THEN
     RAISE EXCEPTION 'O associado selecionado não existe!';
-  ELSIF juiz_tipo <> 'juiz' THEN
+  ELSEIF juiz_tipo <> 'juiz' THEN
     RAISE EXCEPTION 'O associado selecionado não é um juiz!';
   END IF;
   RETURN NEW;
