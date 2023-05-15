@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS hotel (
   PRIMARY KEY (idHotel)
 );
 
-CREATE TABLE IF NOT EXISTS acomodacoesPareticipanteHotel (
+CREATE TABLE IF NOT EXISTS acomodacoesParticipanteHotel (
   idParticipante INTEGER NOT NULL,
   idHotel INTEGER NOT NULL,
   dataEntrada DATE,
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS movimento (
     nroJogo INTEGER NOT NULL,
     jogada VARCHAR(20),
     comentario TEXT,
-    PRIMARY KEY (nroConsecutivo),
+    PRIMARY KEY (nroConsecutivo, nroJogo),
     FOREIGN KEY (nroJogo) REFERENCES jogo(idJogo)
 );
 
@@ -117,7 +117,8 @@ RETURNS TRIGGER AS $$
     BEGIN
         IF NEW.jogadorBrancas = NEW.jogadorPretas THEN
             RAISE EXCEPTION 'Os Jogadores devem ser diferentes';
-        end if;
+        END IF;
+        RETURN NEW;
     END;
 $$ LANGUAGE plpgsql;
 
@@ -131,10 +132,10 @@ RETURNS TRIGGER AS $$
 DECLARE
   juiz_tipo text;
 BEGIN
-  SELECT participandoComo INTO juiz_tipo FROM participantes WHERE idAssociado = NEW.juiz;
+  SELECT participandoComo INTO juiz_tipo FROM participantes WHERE idAssociado = NEW.idArbitro;
   IF juiz_tipo IS NULL THEN
     RAISE EXCEPTION 'O associado selecionado não existe!';
-  ELSIF juiz_tipo <> 'juiz' THEN
+  ELSEIF juiz_tipo <> 'juiz' THEN
     RAISE EXCEPTION 'O associado selecionado não é um juiz!';
   END IF;
   RETURN NEW;
