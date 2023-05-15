@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS participanteJogador (
   idJogador INTEGER NOT NULL,
   nivelDeJogo INTEGER NOT NULL,
   PRIMARY KEY (idJogador),
-  FOREIGN KEY (idJogador) REFERENCES participantes(idAssociado)
+  FOREIGN KEY (idJogador) REFERENCES participantes(idAssociado) ON DELETE CASCADE
 );
 
 CREATE OR REPLACE FUNCTION CRIAR_JOGADOR_PELO_NOME(nomeJogador TEXT, nivelJogador INTEGER)
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS ParticipacaoCampeonatos (
   participouComo TIPO_DE_PARTICIPACAO NOT NULL,
   nomeCampeonato varchar(100) NOT NULL,
   PRIMARY KEY (idParticipante, nomeCampeonato),
-  FOREIGN KEY (idParticipante) REFERENCES participantes (idAssociado)
+  FOREIGN KEY (idParticipante) REFERENCES participantes (idAssociado) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS hotel (
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS acomodacoesParticipanteHotel (
   dataEntrada DATE,
   dataSaida DATE,
   PRIMARY KEY (idParticipante, idHotel, dataEntrada, dataSaida),
-    FOREIGN KEY (idParticipante) REFERENCES participantes(idAssociado),
+    FOREIGN KEY (idParticipante) REFERENCES participantes(idAssociado) ON DELETE CASCADE,
     FOREIGN KEY (idHotel) REFERENCES hotel(idHotel)
 );
 
@@ -88,9 +88,9 @@ CREATE TABLE IF NOT EXISTS jogo (
     jornada DATE NOT NULL,
     idArbitro INTEGER NOT NULL,
     PRIMARY KEY (idJogo),
-    FOREIGN KEY (idArbitro) REFERENCES participantes(idAssociado),
-    FOREIGN KEY (jogadorBrancas) REFERENCES participanteJogador(idJogador),
-    FOREIGN KEY (jogadorPretas) REFERENCES participanteJogador(idJogador)
+    FOREIGN KEY (idArbitro) REFERENCES participantes(idAssociado) ON DELETE CASCADE,
+    FOREIGN KEY (jogadorBrancas) REFERENCES participanteJogador(idJogador) ON DELETE CASCADE,
+    FOREIGN KEY (jogadorPretas) REFERENCES participanteJogador(idJogador) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS celebracaoJogoSalao (
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS celebracaoJogoSalao (
     entradasVendidas INTEGER NOT NULL,
     PRIMARY KEY (idJogo, idHotel, nroSalao),
     FOREIGN KEY (idHotel, nroSalao) REFERENCES salao(idHotel, nroSalao),
-    FOREIGN KEY (idJogo) REFERENCES jogo(idJogo)
+    FOREIGN KEY (idJogo) REFERENCES jogo(idJogo) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS movimento (

@@ -1,5 +1,5 @@
 -- Hotel 1
-INSERT INTO salao (idHotel, nroSalao, capacidade, meios) VALUES (1, 1, 50, 'projetor, televisão');
+INSERT INTO salao (idHotel, nroSalao, capacidade, meios) VALUES (1, 1, 50, 'projetor');
 INSERT INTO salao (idHotel, nroSalao, capacidade, meios) VALUES (1, 2, 30, 'telão, microfone');
 
 -- Hotel 2
@@ -23,7 +23,7 @@ INSERT INTO salao (idHotel, nroSalao, capacidade, meios) VALUES (6, 1, 80, 'proj
 INSERT INTO salao (idHotel, nroSalao, capacidade, meios) VALUES (6, 2, 50, 'projetor, microfone');
 
 -- Hotel 7
-INSERT INTO salao (idHotel, nroSalao, capacidade, meios) VALUES (7, 1, 65, 'projetor, televisão, telão');
+INSERT INTO salao (idHotel, nroSalao, capacidade, meios) VALUES (7, 1, 65, 'projetor, telão');
 INSERT INTO salao (idHotel, nroSalao, capacidade, meios) VALUES (7, 2, 30, 'televisão, microfone');
 
 -- Hotel 8
