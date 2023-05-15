@@ -24,3 +24,4 @@ services:
       - ./sql/populate_movimento.sql:/docker-entrypoint-initdb.d/06_movimento.sql
       - ./sql/populate_acomodacoesParticipanteHotel.sql:/docker-entrypoint-initdb.d/07_acomodacoesParticipanteHotel.sql
       - ./sql/populate_salao.sql:/docker-entrypoint-initdb.d/08_salao.sql
+      - ./sql/populate_celebracaoJogoSalao.sql:/docker-entrypoint-initdb.d/09_celebracaoJogoSalao.sql
