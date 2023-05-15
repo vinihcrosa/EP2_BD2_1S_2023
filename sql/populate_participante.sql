@@ -1,5 +1,5 @@
-insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Renee Vye', '815-705-4940', '76 Arrowood Court', 'jogador', 4);
-insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Lucilia Botly', '742-709-0143', '3 Mitchell Center', 'jogador', 4);
+insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Bob Fisher', '815-705-4940', '76 Arrowood Court', 'jogador', 4);
+insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Garry Kasparov', '742-709-0143', '3 Mitchell Center', 'jogador', 4);
 insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Donelle Arkwright', '723-211-2582', '6 Londonderry Point', 'jogador', 4);
 insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Cynthie Dollin', '960-706-7642', '92 Mayfield Parkway', 'jogador', 4);
 insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Olwen Nerval', '546-999-5013', '23 Anderson Center', 'jogador', 4);
@@ -16,7 +16,7 @@ insert into participantes (nome, telefoneDeContato, endereco, participandoComo, 
 insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Gerrie Cronkshaw', '176-555-7203', '93 Fordem Park', 'jogador', 4);
 
 
-insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Romain Todhunter', '995-513-9783', '529 John Wall Street', 'juiz', 4);
+insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Boris Sparski', '995-513-9783', '529 John Wall Street', 'juiz', 4);
 insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Spence Claw', '596-414-8405', '97589 Main Drive', 'juiz', 4);
 insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Giff Brussels', '265-430-3422', '9 Pine View Court', 'juiz', 4);
 insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Berrie McFee', '876-346-8118', '4580 Village Green Alley', 'juiz', 4);
@@ -25,8 +25,8 @@ insert into participantes (nome, telefoneDeContato, endereco, participandoComo, 
 insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Elyssa De Ambrosi', '941-648-0089', '36012 Lakewood Gardens Avenue', 'juiz', 4);
 insert into participantes (nome, telefoneDeContato, endereco, participandoComo, idPais) values ('Renard Simpole', '933-137-2479', '17 Meadow Valley Plaza', 'juiz', 4);
 
-SELECT CRIAR_JOGADOR_PELO_NOME('Renee Vye', 1);
-SELECT CRIAR_JOGADOR_PELO_NOME('Lucilia Botly', 2);
+SELECT CRIAR_JOGADOR_PELO_NOME('Bob Fisher', 1);
+SELECT CRIAR_JOGADOR_PELO_NOME('Garry Kasparov', 2);
 SELECT CRIAR_JOGADOR_PELO_NOME('Donelle Arkwright', 3);
 SELECT CRIAR_JOGADOR_PELO_NOME('Cynthie Dollin', 4);
 SELECT CRIAR_JOGADOR_PELO_NOME('Olwen Nerval', 5);
